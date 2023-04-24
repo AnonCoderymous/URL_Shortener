@@ -30,9 +30,13 @@
 			$server_protocol = (($_SERVER[ 'SERVER_PROTOCOL' ] === 'HTTP/1.1') ? 'http://' : 'https://');
 			$server_name = $_SERVER['SERVER_NAME'];
 			$server_path = $_SERVER[ 'REQUEST_URI' ];
-			$redirectURL = str_replace('shortener.php', 'redirect.php?token=' ,$server_protocol.$server_name.$server_path);
+			$redirectURL = str_replace('shortener', 'redirect?token=' ,$server_protocol.$server_name.$server_path);
 
 			return $redirectURL;
 		}
 	}
+
+	// echo returnHostUrl();
+	// returnHostUrl();
+
 ?>
