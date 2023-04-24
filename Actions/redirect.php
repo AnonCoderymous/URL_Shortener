@@ -9,7 +9,9 @@
 			$fetchHandler=mysqli_fetch_assoc($fetchQuery);
 			$fetchHandlerCount=mysqli_num_rows($fetchQuery);
 			if($fetchHandlerCount===0){
-				echo 'Invalid URL !!';
+				echo '[!] The URL is invalid with. Token : '.$token;
+				exit;
+
 			}
 			$redirect_url=$fetchHandler['redirect_url'];
 			printf('<script>window.location.href=\'%s\';</script>', $redirect_url);
