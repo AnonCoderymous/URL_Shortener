@@ -35,8 +35,4 @@
 			return $redirectURL;
 		}
 	}
-
-	// echo returnHostUrl();
-	// returnHostUrl();
-
 ?>
